@@ -16,16 +16,22 @@ body{
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    gap: 400px;
     position: sticky;
     top: 0;
-    padding: 10px 100px;
+    width: 100%;
     background: white;
-    z-index: 3;
+    padding: 20px 100px;
+    max-width: 1500px; 
+    z-index: 100;
 }
 
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;    
+    width: 100%;
+}   
 
 a{
     text-decoration: none;
@@ -85,12 +91,15 @@ button:hover{
 }
 
 main{
-    padding: 60px 100px;
+    padding: 20px 100px;
+    max-width: 1500px; 
+    width: 100%;
 }
 
 .main-one{
     display: flex;
-    gap: 200px;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 section{
@@ -200,7 +209,11 @@ img:hover{
 
 
 .benefits-container {
-    width: 1375px;
+    width: 1375px;    
+    max-width: 100%;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
 }
 
 .benefits-title {
@@ -216,21 +229,19 @@ img:hover{
 }
 
 .benefits-flex {
-    display: flex;
-    gap: 40px;
-    background-color: #3c7a7715;
-    border-radius: 15px;
-    padding-left: 5px;
-    padding-top: 15px;
-    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: 40px;                              
 }
 
 .benefit-card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 225px;
-    width: 333.75px;
+    min-height: 250px;     
+    background-color: #3c7a7715;
+    border-radius: 15px;    
+    padding: 30px 24px;      
 }
 
 .benefit-card h3 {
@@ -251,21 +262,17 @@ img:hover{
 }
 
 .questions-box{
-    width: 850px;
-    height: 375px;
-    margin-left: 250px;
-    padding: 5px 5px;
     display: flex;
     flex-direction: column;
     gap: 25px;
     align-items: center;
-    background-color: rgba(216, 231, 221, 0.033)
+    background-color: rgba(216, 231, 221, 0.033);
+    flex-wrap: wrap;
 }
 
 .questions-box div{
     border: 1px solid rgba(127, 127, 127, 0.578);
     background-color: white;
-    width: 750px;
     padding: 5px 5px;
 }
 .questions-box h5{
@@ -280,12 +287,9 @@ img:hover{
     gap: 400px;
     top: 0;
     padding: 10px 100px;
-    background: white;
+    background: black;
     z-index: 3;
-}
-
-.footer h3{
-    opacity: .5;
+    color: white;
 }
 
 #orders{
@@ -347,7 +351,40 @@ textarea:focus{
 }
 
 .footer a{
-    opacity: 0.5;
-    color: black;
+    color: white;
     font-size: 15px;
+}
+
+
+/* Оптимизация для других устройств */
+
+@media (max-width: 960px) {
+    .header-container{
+        flex-direction: column;
+    }
+
+    header{
+        padding: 10px 50px;
+    }
+
+    main {
+        padding: 10px 30px;
+        font-size: clamp(8px, 4vw, 16px);
+    }
+
+    .main-one {
+        flex-direction: column;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .benefits-flex{
+        grid-template-columns: 1fr;
+    }
 }
