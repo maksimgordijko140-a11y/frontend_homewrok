@@ -23,6 +23,7 @@ header{
     padding: 20px 100px;
     max-width: 1500px; 
     z-index: 100;
+    text-align: center;
 }
 
 .header-container{
