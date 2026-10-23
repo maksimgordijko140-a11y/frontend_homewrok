@@ -23,7 +23,6 @@ header{
     padding: 20px 100px;
     max-width: 1500px; 
     z-index: 100;
-    text-align: center;
 }
 
 .header-container{
@@ -32,7 +31,6 @@ header{
     align-items: center;
     margin: 0 auto;    
     width: 100%;
-    text-align: center;
 }   
 
 a{
@@ -90,6 +88,7 @@ button:hover{
     gap: 40px;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 main{
