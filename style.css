@@ -131,13 +131,13 @@ main h1{
 .button-main{
     background: white;
     padding: 10px;
-    font-size: 15px;
     border: none;
     border-radius: 15px;
     transition: all 0.4s ease;
     cursor: pointer;
     transition: all 0.4s ease;
 }
+
 
 .button-main:hover{
     background: black;
@@ -272,14 +272,16 @@ img:hover{
 }
 
 .questions-box div{
-    border: 1px solid rgba(127, 127, 127, 0.578);
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     padding: 5px 5px;
     width: 100%;
 }
 .questions-box h5{
     color: #6b7280ca;
     font-weight: 400;
+    font-size: 20px;
 }
 
 .footer{
